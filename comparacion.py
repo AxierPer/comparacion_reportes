@@ -36,11 +36,11 @@ for datos in datos_a_comparar:
             columna_a_comparar_df1,
             columna_a_comparar_df2,
             on="Ad id.",
-            suffixes=("_Mauro", "_sebas"),
+            suffixes=("_name1", "_name2"),
             )
 
     df_merged["diferencias"] = (
-            df_merged[f"{datos}_Mauro"] != df_merged[f"{datos}_sebas"]
+            df_merged[f"{datos}_name1"] != df_merged[f"{datos}_name2"]
             )
     conteo_diferencias = df_merged["diferencias"].sum()
 
